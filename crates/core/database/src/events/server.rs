@@ -6,7 +6,7 @@ use super::client::Ping;
 #[serde(tag = "type")]
 pub enum ClientMessage {
     Authenticate { token: String },
-    BeginTyping { channel: String },
+    BeginTyping { channel: String, #[serde(default)] indicator: Option<String> },
     EndTyping { channel: String },
     Subscribe { server_id: String },
     Ping { data: Ping, responded: Option<()> },

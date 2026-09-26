@@ -302,6 +302,8 @@ pub enum EventV1 {
     ChannelStartTyping {
         id: String,
         user: String,
+        #[serde(skip_serializing_if = "Option::is_none")]
+        indicator: Option<String>,
     },
 
     /// User stopped typing in a channel

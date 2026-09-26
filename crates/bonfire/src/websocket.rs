@@ -487,7 +487,7 @@ async fn worker(
                 };
 
                 match payload {
-                    ClientMessage::BeginTyping { channel } => {
+                    ClientMessage::BeginTyping { channel, indicator } => {
                         if !subscribed.read().await.contains(&channel) {
                             continue;
                         }
@@ -495,6 +495,7 @@ async fn worker(
                         EventV1::ChannelStartTyping {
                             id: channel.clone(),
                             user: user_id.clone(),
+                            indicator: indicator.clone(),
                         }
                         .p(channel.clone())
                         .await;
