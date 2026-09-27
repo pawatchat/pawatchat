@@ -521,7 +521,7 @@ pub async fn config_no_cache() -> Settings {
 
     // auto-detect production nodes
     if config.hosts.api.contains("https")
-        && (config.hosts.api.contains("revolt.chat") || config.hosts.api.contains("stoat.chat"))
+        && (config.hosts.api.contains("revolt.chat") || config.hosts.api.contains("pawat.chat"))
     {
         config.production = true;
     }

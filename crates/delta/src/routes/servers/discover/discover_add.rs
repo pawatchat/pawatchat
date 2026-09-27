@@ -8,7 +8,7 @@ use rocket::State;
 /// # Add server to Discover
 ///
 /// This puts your server into the Discover request queue.
-/// This endpoint is ONLY USEFUL in production on stoat.chat/app .
+/// This endpoint is ONLY USEFUL in production on pawat.chat/app .
 #[openapi(tag = "Discover")]
 #[put("/<server>/discover")]
 pub async fn discover_add(

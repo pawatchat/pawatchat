@@ -67,6 +67,8 @@ services:
     ports:
       - "5672:5672"
       - "15672:15672" # management UI, for development
+    networks:
+      - default
 
   # Mock SMTP server
   maildev:

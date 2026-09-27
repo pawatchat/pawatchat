@@ -59,7 +59,7 @@ impl TestHarness {
     }
 
     pub async fn account_from_user(&self, id: String) -> (Account, Session) {
-        let email = format!("{}@stoat.chat", TestHarness::rand_string());
+        let email = format!("{}@pawat.chat", TestHarness::rand_string());
         let account = Account {
             id,
             email: email.clone(),

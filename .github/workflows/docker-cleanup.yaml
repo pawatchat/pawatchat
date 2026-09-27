@@ -33,7 +33,7 @@ jobs:
     steps:
       - env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ORG: stoatchat
+          ORG: pawatchat
           PACKAGE: ${{ matrix.package }}
           TAG: pr-${{ github.event.pull_request.number }}
         run: |

@@ -99,13 +99,13 @@ jobs:
           cache-from: type=gha,scope=buildx-base-multi-arch
           cache-to: type=gha,scope=buildx-base-multi-arch,mode=max
 
-      # stoatchat/api
+      # pawatchat/api
       - name: Docker meta
         id: meta-delta
         uses: docker/metadata-action@v4
         with:
           images: |
-            ghcr.io/stoatchat/api
+            ghcr.io/pawatchat/api
       - name: Publish
         uses: docker/build-push-action@v4
         with:
@@ -118,13 +118,13 @@ jobs:
             BASE_IMAGE=ghcr.io/${{ github.repository_owner }}/base:${{ steps.base.outputs.tag }}
           labels: ${{ steps.meta-delta.outputs.labels }}
 
-      # stoatchat/events
+      # pawatchat/events
       - name: Docker meta
         id: meta-bonfire
         uses: docker/metadata-action@v4
         with:
           images: |
-            ghcr.io/stoatchat/events
+            ghcr.io/pawatchat/events
       - name: Publish
         uses: docker/build-push-action@v4
         with:
@@ -137,13 +137,13 @@ jobs:
             BASE_IMAGE=ghcr.io/${{ github.repository_owner }}/base:${{ steps.base.outputs.tag }}
           labels: ${{ steps.meta-bonfire.outputs.labels }}
 
-      # stoatchat/file-server
+      # pawatchat/file-server
       - name: Docker meta
         id: meta-autumn
         uses: docker/metadata-action@v4
         with:
           images: |
-            ghcr.io/stoatchat/file-server
+            ghcr.io/pawatchat/file-server
       - name: Publish
         uses: docker/build-push-action@v4
         with:
@@ -156,13 +156,13 @@ jobs:
             BASE_IMAGE=ghcr.io/${{ github.repository_owner }}/base:${{ steps.base.outputs.tag }}
           labels: ${{ steps.meta-autumn.outputs.labels }}
 
-      # stoatchat/proxy
+      # pawatchat/proxy
       - name: Docker meta
         id: meta-january
         uses: docker/metadata-action@v4
         with:
           images: |
-            ghcr.io/stoatchat/proxy
+            ghcr.io/pawatchat/proxy
       - name: Publish
         uses: docker/build-push-action@v4
         with:
@@ -175,13 +175,13 @@ jobs:
             BASE_IMAGE=ghcr.io/${{ github.repository_owner }}/base:${{ steps.base.outputs.tag }}
           labels: ${{ steps.meta-january.outputs.labels }}
 
-      # stoatchat/gifbox
+      # pawatchat/gifbox
       - name: Docker meta
         id: meta-gifbox
         uses: docker/metadata-action@v4
         with:
           images: |
-            ghcr.io/stoatchat/gifbox
+            ghcr.io/pawatchat/gifbox
       - name: Publish
         uses: docker/build-push-action@v4
         with:
@@ -194,13 +194,13 @@ jobs:
             BASE_IMAGE=ghcr.io/${{ github.repository_owner }}/base:${{ steps.base.outputs.tag }}
           labels: ${{ steps.meta-gifbox.outputs.labels }}
 
-      # stoatchat/crond
+      # pawatchat/crond
       - name: Docker meta
         id: meta-crond
         uses: docker/metadata-action@v4
         with:
           images: |
-            ghcr.io/stoatchat/crond
+            ghcr.io/pawatchat/crond
       - name: Publish
         uses: docker/build-push-action@v4
         with:
@@ -213,13 +213,13 @@ jobs:
             BASE_IMAGE=ghcr.io/${{ github.repository_owner }}/base:${{ steps.base.outputs.tag }}
           labels: ${{ steps.meta-crond.outputs.labels }}
 
-      # stoatchat/pushd
+      # pawatchat/pushd
       - name: Docker meta
         id: meta-pushd
         uses: docker/metadata-action@v4
         with:
           images: |
-            ghcr.io/stoatchat/pushd
+            ghcr.io/pawatchat/pushd
       - name: Publish
         uses: docker/build-push-action@v4
         with:
@@ -232,13 +232,13 @@ jobs:
             BASE_IMAGE=ghcr.io/${{ github.repository_owner }}/base:${{ steps.base.outputs.tag }}
           labels: ${{ steps.meta-pushd.outputs.labels }}
 
-      # stoatchat/voice-ingress
+      # pawatchat/voice-ingress
       - name: Docker meta
         id: meta-voice-ingress
         uses: docker/metadata-action@v4
         with:
           images: |
-            ghcr.io/stoatchat/voice-ingress
+            ghcr.io/pawatchat/voice-ingress
       - name: Publish
         uses: docker/build-push-action@v4
         with:

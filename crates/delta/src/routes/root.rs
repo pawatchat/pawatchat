@@ -161,10 +161,10 @@ impl UserLimits {
 /// # Server Configuration
 #[derive(Serialize, JsonSchema, Debug)]
 pub struct RevoltConfig {
-    /// Stoat API Version
-    pub stoat: String,
+    /// Pawat API Version
+    pub pawat: String,
     pub revolt: String,
-    /// Features enabled on this Stoat node
+    /// Features enabled on this Pawat node
     pub features: RevoltFeatures,
     /// WebSocket URL
     pub ws: String,
@@ -183,7 +183,7 @@ pub async fn root() -> Result<Json<RevoltConfig>> {
     let config = config().await;
 
     Ok(Json(RevoltConfig {
-        stoat: env!("CARGO_PKG_VERSION").to_string(),
+        pawat: env!("CARGO_PKG_VERSION").to_string(),
         revolt: env!("CARGO_PKG_VERSION").to_string(),
         features: RevoltFeatures {
             captcha: CaptchaFeature {

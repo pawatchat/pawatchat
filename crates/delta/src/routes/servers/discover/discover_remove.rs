@@ -11,7 +11,7 @@ use rocket_empty::EmptyResponse;
 ///
 /// This cannot be used if your request is no longer in the queue (ie approved or rejected).
 /// If you wish to reapply after a rejection, submit another POST.
-/// This endpoint is ONLY USEFUL in production on stoat.chat/app .
+/// This endpoint is ONLY USEFUL in production on pawat.chat/app .
 #[openapi(tag = "Discover")]
 #[delete("/<server>/discover")]
 pub async fn discover_remove(

@@ -2,13 +2,13 @@
 #MISE description="Build the API image and push it to the canary registry. Use CARGO_BUILD_JOBS= to lower the job count if this OOMs."
 set -e
 
-IMAGE="registry.stoatinternal.com/stoat/backend-canary"
+IMAGE="registry.pawatinternal.com/pawat/backend-canary"
 TAG=latest
 PLATFORM=linux/amd64
 
 # echo "Building base image for ${PLATFORM}..."
 # docker buildx build --platform "${PLATFORM}" --load \
-#   -t ghcr.io/stoatchat/base:latest -f Dockerfile \
+#   -t ghcr.io/pawatchat/base:latest -f Dockerfile \
 #   --build-arg CARGO_BUILD_JOBS="${CARGO_BUILD_JOBS:-10}" .
 
 echo "Building API image for ${PLATFORM}..."
@@ -43,8 +43,8 @@ echo "Building Voice-ingress image for ${PLATFORM}..."
 docker buildx build --platform "${PLATFORM}" --load \
   -t "${IMAGE}:${TAG}-voice-ingress" - < crates/daemons/voice-ingress/Dockerfile
 
-echo "Logging in to registry.stoatinternal.com..."
-docker login registry.stoatinternal.com \
+echo "Logging in to registry.pawatinternal.com..."
+docker login registry.pawatinternal.com \
   --username "$(op read "op://Employee/canary-robot/username")" \
   --password-stdin < <(op read "op://Employee/canary-robot/credential")
 

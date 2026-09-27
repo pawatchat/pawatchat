@@ -4,19 +4,19 @@ import type * as Preset from '@docusaurus/preset-classic';
 import type { ScalarOptions } from '@scalar/docusaurus';
 
 const config: Config = {
-  title: 'Stoat Developers',
-  tagline: 'Developer documentation for Stoat',
-  favicon: 'https://stoat.chat/favicon-stoat.svg',
+  title: 'Pawat Developers',
+  tagline: 'Developer documentation for Pawat',
+  favicon: 'https://pawat.chat/favicon-pawat.svg',
 
   future: {
     v4: true,
   },
 
-  url: 'https://developers.stoat.chat',
+  url: 'https://developers.pawat.chat',
   baseUrl: '/',
 
-  organizationName: 'stoatchat',
-  projectName: 'stoatchat',
+  organizationName: 'pawatchat',
+  projectName: 'pawatchat',
 
   onBrokenLinks: 'throw',
 
@@ -33,7 +33,7 @@ const config: Config = {
           routeBasePath: '/',
           sidebarPath: './sidebars.ts',
           editUrl:
-            'https://github.com/stoatchat/stoatchat/tree/main/docs/',
+            'https://github.com/pawatchat/pawatchat/tree/main/docs/',
         },
       } satisfies Preset.Options,
     ],
@@ -47,7 +47,7 @@ const config: Config = {
         route: '/api-reference',
         showNavLink: true,
         configuration: {
-          url: 'https://stoat.chat/api/openapi.json',
+          url: 'https://pawat.chat/api/openapi.json',
         },
       } as ScalarOptions,
     ],
@@ -56,7 +56,7 @@ const config: Config = {
       {
         fromExtensions: ['html', 'htm'],
         redirects: [
-          // legacy docs website (stoatchat/developer-wiki)
+          // legacy docs website (pawatchat/developer-wiki)
           {
             from: '/developers/api/reference.html',
             to: '/api-reference',
@@ -81,7 +81,7 @@ const config: Config = {
     },
     navbar: {
       logo: {
-        alt: 'Stoat for Developers',
+        alt: 'Pawat for Developers',
         src: '/img/navbar.light.svg',
         srcDark: '/img/navbar.dark.svg'
       },
@@ -92,7 +92,7 @@ const config: Config = {
           label: 'Docs'
         },
         {
-          href: 'https://github.com/stoatchat',
+          href: 'https://github.com/pawatchat',
           label: 'GitHub',
           position: 'right',
         },
@@ -106,11 +106,11 @@ const config: Config = {
           items: [
             {
               label: 'Source Code',
-              href: 'https://github.com/stoatchat'
+              href: 'https://github.com/pawatchat'
             },
             {
               label: 'Help Translate',
-              href: 'https://translate.stoat.chat'
+              href: 'https://translate.pawat.chat'
             },
           ],
         },
@@ -119,31 +119,31 @@ const config: Config = {
           items: [
             {
               label: 'About',
-              href: 'https://stoat.chat/about'
+              href: 'https://pawat.chat/about'
             },
             {
               label: 'Blog and Changelogs',
-              href: 'https://stoat.chat/updates'
+              href: 'https://pawat.chat/updates'
             },
             {
               label: 'Contact',
-              href: 'https://support.stoat.chat'
+              href: 'https://support.pawat.chat'
             },
           ],
         },
         {
-          title: 'Stoat on Socials',
+          title: 'Pawat on Socials',
           items: [
             {
               label: 'Bluesky',
-              href: 'https://bsky.app/profile/stoat.chat'
+              href: 'https://bsky.app/profile/pawat.chat'
             },
             {
               label: 'Reddit',
-              href: 'https://reddit.com/r/stoatchat'
+              href: 'https://reddit.com/r/pawatchat'
             },
             {
-              label: 'Stoat Server',
+              label: 'Pawat Server',
               href: 'https://stt.gg/Testers'
             },
           ],
@@ -153,19 +153,19 @@ const config: Config = {
           items: [
             {
               label: 'Community Guidelines',
-              href: 'https://stoat.chat/legal/community-guidelines'
+              href: 'https://pawat.chat/legal/community-guidelines'
             },
             {
               label: 'Terms of Service',
-              href: 'https://stoat.chat/legal/terms'
+              href: 'https://pawat.chat/legal/terms'
             },
             {
               label: 'Privacy Policy',
-              href: 'https://stoat.chat/legal/privacy'
+              href: 'https://pawat.chat/legal/privacy'
             },
             {
               label: 'Imprint',
-              href: 'https://stoat.chat/legal/imprint'
+              href: 'https://pawat.chat/legal/imprint'
             },
           ],
         },

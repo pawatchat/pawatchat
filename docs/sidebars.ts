@@ -10,7 +10,7 @@ const sidebars: SidebarsConfig = {
       label: "Developers",
       link: {
         type: "generated-index",
-        description: "Building with Stoat"
+        description: "Building with Pawat"
       },
       items: [
         {
@@ -21,10 +21,10 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: "Developing Stoat",
+      label: "Developing Pawat",
       link: {
         type: "generated-index",
-        description: "Building Stoat"
+        description: "Building Pawat"
       },
       items: [
         {
@@ -34,12 +34,12 @@ const sidebars: SidebarsConfig = {
         {
           type: 'link',
           label: "for Web",
-          href: "https://stoatchat.github.io/for-web"
+          href: "https://pawatchat.github.io/for-web"
         },
         {
           type: 'link',
           label: "for Android",
-          href: "https://stoatchat.github.io/for-android"
+          href: "https://pawatchat.github.io/for-android"
         }
       ]
     }

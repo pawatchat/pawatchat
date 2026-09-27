@@ -236,8 +236,8 @@ async fn listener(
     kill_signal_r: async_channel::Receiver<()>,
     write: &Mutex<WsWriter>,
 ) {
-    let stoat_config = revolt_config::config().await;
-    let url = stoat_config
+    let pawat_config = revolt_config::config().await;
+    let url = pawat_config
         .database
         .redis_pubsub
         .unwrap_or(REDIS_URI.to_string());

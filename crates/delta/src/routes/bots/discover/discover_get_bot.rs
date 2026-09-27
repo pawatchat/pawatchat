@@ -9,7 +9,7 @@ use rocket::{serde::json::Json, State};
 ///
 /// Fetches the status of your Discover request.
 /// If it has been approved or denied, the reason will be provided (if applicable).
-/// This endpoint is ONLY USEFUL in production on stoat.chat/app .
+/// This endpoint is ONLY USEFUL in production on pawat.chat/app .
 #[openapi(tag = "Discover")]
 #[get("/<bot_id>/discover")]
 pub async fn discover_get_bot(
