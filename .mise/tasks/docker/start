@@ -5,7 +5,7 @@ set -e
 docker compose up -d
 
 docker run \
-  --network=pawatchat_default \
+  --network=${DOCKER_NETWORK_NAME} \
   --name wait \
   --rm dokku/wait  -c \
   rabbit:${RABBIT_PORT},\
